@@ -18,7 +18,7 @@ function Home() {
   return (
     <div className={`${dark && "dark"}`}>
       <Navbar dark={dark} toggleDark={toggleDark} />
-      <main className="dark:bg-sky-950 transition-colors duration-200 container max-w-full">
+      <main className="dark:bg-sky-950 transition-colors duration-300 container max-w-full">
         <div className="text-sky-950 dark:text-white grid md:grid-cols-2">
           <Header />
           <Project />

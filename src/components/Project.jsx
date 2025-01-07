@@ -31,18 +31,19 @@ function Project() {
           </div>
           {/* image */}
           <div className="w-full md:w-1/2">
-            <div className="relative">
-              <img
-                src={item.image}
-                className="w-full h-80 bg-cover shadow-xl rounded-md"
-                alt=""
-              />
-              <div className={`flex absolute bottom-2 ${i % 2 === 0 ? "md:left-2" : "md:right-2" }`}>
-                {dataProject
-                  .find((_, index) => index == i)
-                  .skill.map((data, idx) => (
-                    <div className="p-2 mx-1 bg-slate-200" key={idx}>{data}</div>
-                  ))}
+            <div className="bg-gray-200 dark:bg-sky-900 p-3 shadow-xl rounded-md">
+              <div className="relative">
+                <img
+                  src={item.image}
+                  className="w-full h-80 object-cover object-left-top"
+                />
+                <div className={`flex absolute bottom-2 left-2 ${i % 2 === 0 ? "md:left-2" : "md:right-2" }`}>
+                  {dataProject
+                    .find((_, index) => index == i)
+                    .skill.map((data, idx) => (
+                      <div className="p-2 mx-0.5 bg-sky-500 rounded-full hover:bg-sky-400 cursor-pointer" key={idx}>{data.icon}</div>
+                    ))}
+                </div>
               </div>
             </div>
           </div>

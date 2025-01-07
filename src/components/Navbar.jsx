@@ -14,7 +14,7 @@ function Navbar({dark, toggleDark}) {
   return (
     <nav className="w-full sticky top-0 z-10 backdrop-blur-sm transition-colors duration-200 md:hover:bg-white">
       <div className="container flex mx-auto p-3">
-        <div onClick={toggleDark} className="my-1 mx-1 p-2 cursor-pointer border-2 border-sky-950 rounded-full dark:bg-sky-950 dark:text-white dark:border-white">
+        <div onClick={toggleDark} className="my-1 mx-1 p-2 cursor-pointer border-2 border-sky-950 rounded-full dark:bg-sky-950 dark:text-white hover:bg-sky-950 hover:text-white dark:hover:bg-white dark:hover:text-sky-950">
           {dark ? <IoMoon /> : <IoSunny /> }
         </div>
         <a href="#" className="my-2 mx-1 font-bold text-lg">
