@@ -12,7 +12,7 @@ function Experiance() {
   
   return (
     <>
-      <div className={`flex items-center justify-center pt-8 md:col-span-2 ${section % 2 !== 0 && "bg-gray-100 border-t"} `}>
+      <div id="Experiance" className={`flex items-center justify-center pt-8 md:col-span-2 ${section % 2 !== 0 && "bg-gray-100 border-t"} `}>
         <div className="flex-grow border-t border-gray-300"></div>
         <span className="mx-4 text-sky-950 text-2xl font-bold">
           📋 EXPERIANCE

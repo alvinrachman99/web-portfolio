@@ -3,7 +3,7 @@ import React from "react";
 function Header() {
   return (
     <>
-      <div className="py-4 px-8 xl:px-32 flex flex-col md:pt-20 md:order-first">
+      <div id="Header" className="py-4 px-8 xl:px-32 flex flex-col md:pt-14 md:order-first">
         <span className="text-base font-semibold text-sky-500 py-1">
           Hello World, I'm
         </span>
