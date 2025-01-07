@@ -14,4 +14,6 @@ export const dataProject = [
         skill: ['01', '02', '03', '04']
 
     },
+    
+    
 ]

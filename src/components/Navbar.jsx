@@ -2,20 +2,22 @@ import React, { useState } from "react";
 import { HashLink } from "react-router-hash-link";
 import { FaBars } from "react-icons/fa6";
 import { IoMdClose } from "react-icons/io";
+import { IoMoon, IoSunny } from "react-icons/io5";
 
-function Navbar() {
+function Navbar({dark, toggleDark}) {
   const [mobileMenu, setMobileMenu] = useState(false);
 
-  console.log({mobileMenu})
   const mobileMenuBtn = () => {
     setMobileMenu(!mobileMenu);
   };
 
   return (
-    <nav className="w-full sticky top-0 z-10 backdrop-blur-sm md:hover:bg-white">
+    <nav className="w-full sticky top-0 z-10 backdrop-blur-sm transition-colors duration-200 md:hover:bg-white">
       <div className="container flex mx-auto p-3">
-        <div className="bg-slate-200 p-2 mr-2">01</div>
-        <a href="#" className="py-2 font-bold">
+        <div onClick={toggleDark} className="my-1 mx-1 p-2 cursor-pointer border-2 border-sky-950 rounded-full dark:bg-sky-950 dark:text-white dark:border-white">
+          {dark ? <IoMoon /> : <IoSunny /> }
+        </div>
+        <a href="#" className="my-2 mx-1 font-bold text-lg">
           <span className="text-sky-500">alvin</span>Rchmns();
         </a>
         <div className="hidden md:flex space-x-1 ml-auto">

@@ -6,7 +6,7 @@ function Project() {
     <>
       <div id="Project" className="flex items-center justify-center pt-8 md:col-span-2">
         <div className="flex-grow border-t border-gray-300"></div>
-        <span className="mx-4 text-sky-950 text-2xl font-bold">🚀 PROJECT</span>
+        <span className="mx-4 text-2xl font-bold">🚀 PROJECT</span>
         <div className="flex-grow border-t border-gray-300"></div>
       </div>
 
@@ -20,14 +20,16 @@ function Project() {
 
           key={i}
         >
-          <div className="w-full md:w-1/2 flex">
+          {/* description */}
+          <div className="w-full md:w-1/2 flex"> 
             <div className="h-fit my-auto">
-              <span className="text-xl text-sky-950 font-bold">
+              <span className={`text-xl font-bold ${i % 2 !== 0 && "dark:text-sky-950"}`}>
                 {item.title}
               </span>
-              <p className="mt-3 text-sm">{item.description}</p>
+              <p className={`mt-3 text-sm ${i % 2 !== 0 && "dark:text-sky-950"}`}>{item.description}</p>
             </div>
           </div>
+          {/* image */}
           <div className="w-full md:w-1/2">
             <div className="relative">
               <img

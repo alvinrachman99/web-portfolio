@@ -7,21 +7,21 @@ function FixedButton() {
     <>
       <div
         onClick={scrollToTop}
-        className="fixed bottom-6 right-4 cursor-pointer border-2 border-sky-950 rounded-full shadow-xl hover:bg-sky-950 hover:text-white z-10"
+        className="fixed bottom-6 right-4 cursor-pointer rounded-full shadow-xl text-sky-950 dark:text-white bg-sky-500 hover:bg-sky-400"
       >
         <div className="p-2 font-bold md:p-3 text-xl">
           <BiSolidUpArrow />
         </div>
       </div>
 
-      <div className="fixed right-4 bottom-1/3 cursor-pointer shadow-xl rounded-full z-10">
-        <div className="border-2 border-b-0 border-sky-950 rounded-t-full hover:bg-sky-950 hover:text-white p-2 font-bold md:p-3 text-xl">
+      <div className="fixed right-4 bottom-1/3 cursor-pointer shadow-xl rounded-full">
+        <div className="rounded-t-full p-2 font-bold md:p-3 text-xl text-sky-950 dark:text-white bg-sky-500 hover:bg-sky-400">
           <FaGithub />
         </div>
-        <div className="border-x-2 border-sky-950 hover:bg-sky-950 hover:text-white p-2 font-bold md:p-3 text-xl">
+        <div className="p-2 font-bold md:p-3 text-xl text-sky-950 dark:text-white bg-sky-500 hover:bg-sky-400 my-0.5">
           <FaLinkedin />
         </div>
-        <div className="border-2 border-t-0 border-sky-950 rounded-b-full hover:bg-sky-950 hover:text-white p-2 font-bold md:p-3 text-xl">
+        <div className="rounded-b-full p-2 font-bold md:p-3 text-xl text-sky-950 dark:text-white bg-sky-500 hover:bg-sky-400">
           <FaInstagram />
         </div>
       </div>
