@@ -35,10 +35,10 @@ function Experiance() {
             iconStyle={{ background: "#EF4223", color: "#fff" }}
             icon={<DiCodeigniter />}
           >
-            <h3 className="vertical-timeline-element-title">
+            <h3 className="vertical-timeline-element-title font-bold">
               PT Shan Informasi Sistem
             </h3>
-            <h4 className="vertical-timeline-element-subtitle">
+            <h4 className="vertical-timeline-element-subtitle font-semibold">
               Web Developer
             </h4>
             <p>
