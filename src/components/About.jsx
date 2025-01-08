@@ -75,7 +75,8 @@ function About() {
             onClick={btnSkills}
             value="0"
             type="button"
-            className={`text-xs mx-1 py-2 px-3 text-slate-400 rounded-md hover:bg-sky-950 hover:text-white dark:hover:bg-white dark:hover:text-sky-950
+            className={`text-xs mx-1 py-2 px-3 text-slate-400 rounded-md hover:bg-sky-950 hover:text-white 
+            ${section % 2 === 0 && "dark:hover:bg-white dark:hover:text-sky-950"}
             ${section % 2 !== 0 && "dark:hover:bg-sky-950 dark:hover:text-white"}
             ${
               active === 0 &&
@@ -95,7 +96,8 @@ function About() {
             onClick={btnSkills}
             value="1"
             type="button"
-            className={`text-xs mx-1 py-2 px-3 text-slate-400 rounded-md hover:bg-sky-950 hover:text-white dark:hover:bg-white dark:hover:text-sky-950 
+            className={`text-xs mx-1 py-2 px-3 text-slate-400 rounded-md hover:bg-sky-950 hover:text-white 
+            ${section % 2 === 0 && "dark:hover:bg-white dark:hover:text-sky-950"}
             ${section % 2 !== 0 && "dark:hover:bg-sky-950 dark:hover:text-white"}
             ${
               active === 1 &&

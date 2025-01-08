@@ -1,6 +1,18 @@
 import photo_profile from '../assets/photo_profile.jpg'
 
 function Header() {
+
+  const handleDownload = () => {
+    const fileUrl = "/cv.pdf";
+
+    const link = document.createElement("a");
+    link.href = fileUrl;
+    link.download = "cv.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <>
       {/* description */}
@@ -37,7 +49,7 @@ function Header() {
       </div>
       {/* CV */}
       <div className="bg-gray-100 border-y py-10 text-center md:col-span-2">
-        <button className="border-2 border-sky-950 border-dashed p-3 rounded-md hover:bg-sky-950 hover:text-white dark:text-sky-950 dark:hover:text-white">
+        <button onClick={handleDownload} type='button' className="border-2 border-sky-950 border-dashed p-3 rounded-md hover:bg-sky-950 hover:text-white dark:text-sky-950 dark:hover:text-white">
           🖇️ Download CV
         </button>
       </div>
