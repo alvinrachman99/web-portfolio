@@ -13,6 +13,7 @@ function Experiance() {
   return (
     <>
       <div
+        data-aos="fade-up"
         id="Experiance"
         className={`flex items-center justify-center pt-8 md:col-span-2 ${
           section % 2 !== 0 && "bg-gray-100 border-t"

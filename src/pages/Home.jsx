@@ -6,6 +6,7 @@ import Experiance from "../components/Experiance";
 import About from "../components/About";
 import Footer from "../components/Footer";
 import FixedButton from "../components/FixedButton";
+import ScrollToTop from "../components/ScrollToTop"
 
 function Home() {
   
@@ -28,6 +29,7 @@ function Home() {
       </main>
       <Footer />
       <FixedButton />
+      <ScrollToTop />
     </div>
   );
 }

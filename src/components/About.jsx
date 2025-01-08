@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { dataAbout, dataAboutTech, dataAboutTools } from "../data/DataAbout";
 import { dataProject } from "../data/DataProject";
+import { motion } from "motion/react";
 
 function About() {
   const lenDataProject = dataProject.length - 1;
@@ -25,6 +26,7 @@ function About() {
   return (
     <>
       <div
+        data-aos="fade-up"
         id="About"
         className={`flex items-center justify-center pt-8 md:col-span-2 ${
           section % 2 !== 0 && "bg-gray-100 border-t"
@@ -40,23 +42,25 @@ function About() {
         </span>
         <div className="flex-grow border-t border-gray-300"></div>
       </div>
+      {/* description */}
       <div
         className={`px-8 xl:px-32 py-10 text-center flex ${
           section % 2 !== 0 && "bg-gray-100 border-b"
         }`}
       >
-        <div className={`h-fit my-auto ${section % 2 !== 0 && "text-sky-950"}`}>
+        <div data-aos="fade-right" className={`h-fit my-auto ${section % 2 !== 0 && "text-sky-950"}`}>
           <p>{dataAbout[0]}</p>
           <br />
           <p>{dataAbout[1]}</p>
         </div>
       </div>
+      {/* skills */}
       <div
         className={`px-8 xl:px-32 py-10 ${
           section % 2 !== 0 && "bg-gray-100 border-b"
         }`}
       >
-        <div className="flex items-center w-28">
+        <div data-aos="fade-up" className="flex items-center w-28">
           <div
             className={`flex-grow border-t ${
               section % 2 !== 0 && "border-sky-950"
@@ -70,14 +74,20 @@ function About() {
             Skills
           </span>
         </div>
-        <div className="my-4">
-          <button
+        <div data-aos="fade-left" className="my-4">
+          <motion.button
+            whileHover={{scale:1.1}}
+            whileTap={{scale:0.9}}
             onClick={btnSkills}
             value="0"
             type="button"
             className={`text-xs mx-1 py-2 px-3 text-slate-400 rounded-md hover:bg-sky-950 hover:text-white 
-            ${section % 2 === 0 && "dark:hover:bg-white dark:hover:text-sky-950"}
-            ${section % 2 !== 0 && "dark:hover:bg-sky-950 dark:hover:text-white"}
+            ${
+              section % 2 === 0 && "dark:hover:bg-white dark:hover:text-sky-950"
+            }
+            ${
+              section % 2 !== 0 && "dark:hover:bg-sky-950 dark:hover:text-white"
+            }
             ${
               active === 0 &&
               section % 2 === 0 &&
@@ -91,14 +101,21 @@ function About() {
             `}
           >
             Tech Stack
-          </button>
-          <button
+          </motion.button>
+          <motion.button
+            whileHover={{scale:1.1}}
+            whileTap={{scale:0.9}}
+            transition={{ease:"easeInOut"}}
             onClick={btnSkills}
             value="1"
             type="button"
             className={`text-xs mx-1 py-2 px-3 text-slate-400 rounded-md hover:bg-sky-950 hover:text-white 
-            ${section % 2 === 0 && "dark:hover:bg-white dark:hover:text-sky-950"}
-            ${section % 2 !== 0 && "dark:hover:bg-sky-950 dark:hover:text-white"}
+            ${
+              section % 2 === 0 && "dark:hover:bg-white dark:hover:text-sky-950"
+            }
+            ${
+              section % 2 !== 0 && "dark:hover:bg-sky-950 dark:hover:text-white"
+            }
             ${
               active === 1 &&
               section % 2 === 0 &&
@@ -111,11 +128,13 @@ function About() {
             } `}
           >
             Tools
-          </button>
+          </motion.button>
         </div>
-        <div className="grid grid-cols-2 gap-3 lg:grid-cols-3 my-4 text-sm">
+        <div data-aos="fade-bottom" className="grid grid-cols-2 gap-3 lg:grid-cols-3 my-4 text-sm">
           {dataSkills.map((item, i) => (
-            <div
+            <motion.div
+              whileHover={{scale:1.1}}
+              transition={{ease:"easeInOut"}}
               className={`flex border-2 rounded-md shadow-lg w-full p-3 cursor-pointer hover:bg-sky-950 hover:text-white dark:bg-white dark:text-sky-950 dark:hover:bg-sky-950 dark:hover:text-white ${
                 section % 2 !== 0 &&
                 "dark:text-sky-950 dark:hover:bg-sky-950 dark:hover:text-white"
@@ -126,7 +145,7 @@ function About() {
                 {item.icon}
               </div>
               <div className="ml-2">{item.label}</div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

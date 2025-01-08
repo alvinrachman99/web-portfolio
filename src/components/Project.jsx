@@ -1,10 +1,11 @@
 import React from "react";
 import { dataProject } from "../data/DataProject";
+import { motion } from "motion/react";
 
 function Project() {
   return (
     <>
-      <div id="Project" className="flex items-center justify-center pt-8 md:col-span-2">
+      <div data-aos="fade-up" id="Project" className="flex items-center justify-center pt-8 md:col-span-2">
         <div className="flex-grow border-t border-gray-300"></div>
         <span className="mx-4 text-2xl font-bold">🚀 PROJECT</span>
         <div className="flex-grow border-t border-gray-300"></div>
@@ -21,7 +22,7 @@ function Project() {
           key={i}
         >
           {/* description */}
-          <div className="w-full md:w-1/2 flex"> 
+          <div data-aos={`fade-${i % 2 !== 0 ? "left" : "right"}`} className="w-full md:w-1/2 flex"> 
             <div className="h-fit my-auto">
               <span className={`text-xl font-bold ${i % 2 !== 0 && "dark:text-sky-950"}`}>
                 {item.title}
@@ -30,7 +31,7 @@ function Project() {
             </div>
           </div>
           {/* image */}
-          <div className="w-full md:w-1/2">
+          <div data-aos={`fade-${i % 2 !== 0 ? "right" : "left"}`} className="w-full md:w-1/2">
             <div className="bg-gray-200 dark:bg-sky-900 p-3 shadow-xl rounded-md">
               <div className="relative">
                 <img
@@ -41,7 +42,10 @@ function Project() {
                   {dataProject
                     .find((_, index) => index == i)
                     .skill.map((data, idx) => (
-                      <div className="p-2 mx-0.5 bg-sky-500 rounded-full hover:bg-sky-400 cursor-pointer" key={idx}>{data.icon}</div>
+                      <motion.div 
+                        whileHover={{scale:1.1}}
+                        transition={{ease:"easeInOut"}}
+                        className="p-2 mx-0.5 bg-sky-500 rounded-full hover:bg-sky-400 cursor-pointer" key={idx}>{data.icon}</motion.div>
                     ))}
                 </div>
               </div>
