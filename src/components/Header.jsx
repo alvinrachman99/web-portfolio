@@ -96,18 +96,21 @@ function Header() {
       </div>
       {/* image */}
       <div
+        
         data-aos="fade-left"
         className="py-4 justify-items-center order-first"
       >
-        <motion.img
-          whileHover={{ scale: 1.2 }}
-          transition={{
-            ease: "easeInOut",
-          }}
-          src={photo_profile}
-          className="w-80 h-80 md:h-96 object-cover object-bottom rounded-full shadow-xl md:rounded-md"
-          alt="Photo Profile"
-        />
+        <div className="w-80 h-80 md:h-96 rounded-full shadow-xl md:rounded-md overflow-hidden">
+          <motion.img
+            whileHover={{ scale: 1.1 }}
+            transition={{
+              ease: "easeInOut",
+            }}
+            src={photo_profile}
+            className="w-full h-full object-cover object-bottom"
+            alt="Photo Profile"
+          />
+        </div>
       </div>
       {/* CV */}
       <div className="bg-gray-100 border-y py-10 text-center md:col-span-2">
