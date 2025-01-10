@@ -71,12 +71,8 @@ function Header() {
             className="inline-block w-0.5 h-7 ml-1 align-middle bg-sky-500"
           />
         </motion.div>
-        <p className="text-sm py-1">
-          <span className="font-semibold">3 years</span> of experiance in Web
-          Development, using{" "}
-          <span className="font-semibold">Codeigniter and Jquery</span> for
-          developing a website and web applications
-        </p>
+        <p className="text-sm py-1"><span className="font-semibold">3 years</span> of experience in Web Development, specializing in building websites and web applications. Currently exploring modern technologies like <span className="font-semibold
+        ">Golang and ReactJS</span> to expand my skill set.</p>
         <div className="flex flex-col py-1 gap-2">
           <motion.button
             whileHover={{ scale: 1.1 }}
