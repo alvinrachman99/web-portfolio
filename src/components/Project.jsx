@@ -83,7 +83,7 @@ function Project() {
             data-aos={`fade-${i % 2 !== 0 ? "right" : "left"}`}
             className="w-full md:w-1/2"
           >
-            <div className={`bg-gray-200 dark:bg-${i % 2 !== 0 ? "gray-200" : "sky-900"} pt-5 shadow-xl rounded-md`}>
+            <div className={`bg-gray-200 ${i % 2 !== 0 ? "dark:bg-gray-200" : "dark:bg-sky-900"} pt-5 shadow-xl rounded-md`}>
               <div className="relative overflow-hidden">
                 <motion.img
                   whileHover={{scale:1.1}}
