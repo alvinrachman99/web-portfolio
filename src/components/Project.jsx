@@ -89,7 +89,7 @@ function Project() {
                   whileHover={{scale:1.1}}
                   transition={{ease:"easeInOut"}}
                   src={item.image}
-                  className="w-full h-80 object-cover object-left-top"
+                  className="w-full h-80 object-cover object-center"
                 />
                 <div
                   className={`flex absolute bottom-2 left-2 ${

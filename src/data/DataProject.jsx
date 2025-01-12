@@ -1,6 +1,8 @@
 import a1 from "../assets/project/a1.png";
+import b1 from "../assets/project/b1.png";
 import { GrReactjs } from "react-icons/gr";
 import { SiTailwindcss } from "react-icons/si";
+import { FaGolang } from "react-icons/fa6";
 
 export const dataProject = [
   {
@@ -23,19 +25,15 @@ export const dataProject = [
   },
   {
     id: 2,
-    title: "Lorem, Ipsum",
-    description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo vero deleniti perferendis reiciendis est cum blanditiis?`,
-    image: "https://picsum.photos/300/300",
+    title: "Task App",
+    description: `A web application that helps users efficiently manage their daily tasks, providing a responsive and functional user experience`,
+    image: b1,
     linkdetail: "",
-    github: "",
+    github: "https://github.com/alvinrachman99/todolist",
     skill: [
       {
-        label: "ReactJS",
-        icon: <GrReactjs />,
-      },
-      {
-        label: "Tailwind",
-        icon: <SiTailwindcss />,
+        label: "Golang",
+        icon: <FaGolang />,
       },
       {
         label: "ReactJS",
