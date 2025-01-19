@@ -23,23 +23,23 @@ function Navbar({ dark, toggleDark }) {
         >
           {dark ? <IoMoon /> : <IoSunny />}
         </motion.div>
-        <a href="#Header" className="my-2 mx-1 font-bold text-lg">
+        <a href="/#Header" className="my-2 mx-1 font-bold text-lg">
           <span className="text-sky-500">alvin</span>Rchmns();
         </a>
         <div className="hidden md:flex space-x-1 ml-auto">
-          <a href="#Header" className="px-4 py-2 relative group">
+          <a href="/#Header" className="px-4 py-2 relative group">
             🏠 Home
             <span className="absolute left-1/4 bottom-0 border-0 w-0 group-hover:border-2 group-hover:w-1/2 group-hover:border-sky-950"></span>
           </a>
-          <HashLink to="#About" className="px-4 py-2 relative group">
+          <HashLink to="/#About" className="px-4 py-2 relative group">
             😎 About
             <span className="absolute left-1/4 bottom-0 border-0 w-0 group-hover:border-2 group-hover:w-1/2 group-hover:border-sky-950"></span>
           </HashLink>
-          <HashLink to="#Project" className="px-4 py-2 relative group">
+          <HashLink to="/#Project" className="px-4 py-2 relative group">
             🚀 Project
             <span className="absolute left-1/4 bottom-0 border-0 w-0 group-hover:border-2 group-hover:w-1/2 group-hover:border-sky-950"></span>
           </HashLink>
-          <HashLink to="#Experiance" className="px-4 py-2 relative group">
+          <HashLink to="/#Experiance" className="px-4 py-2 relative group">
             📋 Experiance
             <span className="absolute left-1/4 bottom-0 border-0 w-0 group-hover:border-2 group-hover:w-1/2 group-hover:border-sky-950"></span>
           </HashLink>
@@ -63,34 +63,34 @@ function Navbar({ dark, toggleDark }) {
         className={`${mobileMenu ? "flex" : "hidden"} bg-slate-100 flex-col`}
       >
         <ul>
-          <li className="py-2 border-t text-center hover:bg-sky-950 hover:text-white">
-            <a
-              href="#"
-              className=""
+          <li className="border-t hover:bg-sky-950 hover:text-white">
+            <HashLink
+              to="/#Header"
+              className="flex justify-center py-2"
             >
               🏠 Home
-            </a>
+            </HashLink>
           </li>
-          <li className="py-2 border-t text-center hover:bg-sky-950 hover:text-white">
+          <li className="border-t hover:bg-sky-950 hover:text-white">
             <HashLink
-              to="#About"
-              className=""
+              to="/#About"
+              className="flex justify-center py-2"
             >
               😎 About
             </HashLink>
           </li>
-          <li className="py-2 border-t text-center hover:bg-sky-950 hover:text-white">
+          <li className="border-t hover:bg-sky-950 hover:text-white">
             <HashLink
-              to="#Project"
-              className=""
+              to="/#Project"
+              className="flex justify-center py-2"
             >
               🚀 Project
             </HashLink>
           </li>
-          <li className="py-2 border-y text-center hover:bg-sky-950 hover:text-white">
+          <li className="border-y hover:bg-sky-950 hover:text-white">
             <HashLink
-              to="#Experiance"
-              className=""
+              to="/#Experiance"
+              className="flex justify-center py-2"
             >
               📋 Experiance
             </HashLink>

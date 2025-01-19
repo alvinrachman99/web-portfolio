@@ -3,6 +3,7 @@ import { dataProject } from "../data/DataProject";
 import { motion } from "motion/react";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 function Project() {
   return (
@@ -59,11 +60,10 @@ function Project() {
                     <span className="ml-2 underline text-sky-500 hover:text-sky-400">GitHub</span>
                   </a>
                 )}
-                {item.linkdetail && (
-                  <a
-                    target="_blank"
+                {item.detail && (
+                  <Link
                     className="flex text-xs align-middle"
-                    href={item.linkdetail}
+                    to={`/project/${item.id}`}
                   >
                     <FaExternalLinkAlt
                       className={`text-lg ${
@@ -73,7 +73,7 @@ function Project() {
                     <span className="ml-2 underline text-sky-500 hover:text-sky-400">
                       View Detail
                     </span>
-                  </a>
+                  </Link>
                 )}
               </div>
             </div>
