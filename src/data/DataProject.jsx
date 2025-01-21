@@ -5,10 +5,14 @@ import c1 from "../assets/project/c1.png";
 import c2 from "../assets/project/c2.png";
 import c3 from "../assets/project/c3.png";
 import c4 from "../assets/project/c4.png";
+import d1 from "../assets/project/d1.png";
+import d2 from "../assets/project/d2.png";
+import d3 from "../assets/project/d3.png";
 import { GrReactjs } from "react-icons/gr";
 import { SiTailwindcss } from "react-icons/si";
 import { FaGolang } from "react-icons/fa6";
 import { BiLogoPostgresql } from "react-icons/bi";
+import { SiTypescript } from "react-icons/si";
 
 export const dataProject = [
   {
@@ -148,6 +152,52 @@ export const dataProject = [
             "Users can also upload or change their profile picture. The backend stores the new image in a designated folder, and the database is updated with the filename.",
           ]
         },
+      ]
+    }
+  },
+  {
+    id: 4,
+    title: "IMDB Clone",
+    description: `A web application inspired by IMDb, allowing users to search for movies and view detailed information, including plot, genre, director, cast, release year, and IMDb rating. Built with React and TypeScript, using the OMDb API for dynamic movie data.`,
+    image: d1,
+    github: "https://github.com/alvinrachman99/imdb-clone",
+    skill: [
+      {
+        label: "ReactJS",
+        icon: <GrReactjs />,
+      },
+      {
+        label: "Typescript",
+        icon: <SiTypescript />,
+      },
+      {
+        label: "Tailwind",
+        icon: <SiTailwindcss />,
+      },
+    ],
+    detail: {
+      image: [d1, d2, d3],
+      desc: `A web application inspired by IMDb, allowing users to search for movies and view detailed information, including plot, genre, director, cast, release year, and IMDb rating. Built with React and TypeScript, using the OMDb API for dynamic movie data.`,
+      tech: ["React & TypeScript: For building a dynamic and type-safe UI.", "OMDb API: For fetching movie data.", "Context API: For global state management.", "Styling: Tailwind CSS"],
+      feat: [
+        {
+          name: "Movie Search",
+          desc: [
+            "Search for movies by title with results showing posters, release year, and titles."
+          ]
+        },
+        {
+          name: "Movie Details",
+          desc: [
+            "View detailed movie information by selecting a specific movie."
+          ]
+        },
+        {
+          name: "Responsive Design",
+          desc: [
+            "Works seamlessly across devices."
+          ]
+        }
       ]
     }
   },
