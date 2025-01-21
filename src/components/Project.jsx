@@ -6,6 +6,7 @@ import { FaGithub } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 function Project() {
+  const data = [...dataProject].sort((a, b) => b.id - a.id)
   return (
     <>
       <div
@@ -18,7 +19,7 @@ function Project() {
         <div className="flex-grow border-t border-gray-300"></div>
       </div>
 
-      {dataProject.map((item, i) => (
+      {data.map((item, i) => (
         // section background
         // genap: bg-white/default, ganjil: bg-gray-100, border-y
         <div
@@ -96,7 +97,7 @@ function Project() {
                     i % 2 === 0 ? "md:left-2" : "md:right-2"
                   }`}
                 >
-                  {dataProject
+                  {data
                     .find((_, index) => index == i)
                     .skill.map((data, idx) => (
                       <motion.div
